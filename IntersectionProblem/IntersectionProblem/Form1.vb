@@ -27,7 +27,32 @@ Public Class Form1
 
         ' Please write your code here...
 
-        txtResult.Text = "Not implemented yet"
+        If (B < A Or C < D) Then
+            MessageBox.Show("please enter valid numbers", "Error")
+        End If
+
+
+        txtResult.Text = FindIntersection(A, B, C, D)
     End Sub
 
+
+    Function FindIntersection(A As Double, B As Double, C As Double, d As Double) As String
+
+        Dim result As String
+        If (B < C) Or (d < A) Then
+            result = "no intersection"
+        Else
+            Dim begPoint As Double
+            begPoint = Math.Max(A, C)
+
+            Dim endpoint As Double
+            endpoint = Math.Min(B, d)
+
+            result = "The intersection is from " & begPoint & " to " & endpoint\
+            Return result
+        End If
+
+
+
+    End Function
 End Class
